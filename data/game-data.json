@@ -1,28 +1,404 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "updatedAt": "2026-10-05",
+  "policy": {
+    "automatedUpdates": "review-before-overwrite",
+    "gameVerifiedProtection": true,
+    "sourcePriority": [
+      "current-game",
+      "gonk.tools",
+      "current-droidex-community",
+      "community-cross-check"
+    ]
+  },
   "notes": [
     "Central Kyber Tool game-data layer.",
-    "Game-verified values must not be silently overwritten by automated sources."
+    "Game-verified values must not be silently overwritten by automated sources.",
+    "Schema v2 migrates the current embedded Droidex subset and all 17 Fusion recipes into the central data layer."
   ],
-  "blueprintSchedule": {
-    "stellar": {
-      "intervalSeconds": 1800,
-      "offsetSeconds": 300
+  "lockedVerifiedMechanics": {
+    "blueprintSchedule": {
+      "stellar": {
+        "intervalSeconds": 1800,
+        "offsetSeconds": 300
+      },
+      "mythic": {
+        "intervalSeconds": 3600,
+        "offsetSeconds": 3300
+      },
+      "kyber": {
+        "intervalSeconds": 3600,
+        "offsetSeconds": 900
+      }
     },
-    "mythic": {
-      "intervalSeconds": 3600,
-      "offsetSeconds": 3300
-    },
-    "kyber": {
-      "intervalSeconds": 3600,
-      "offsetSeconds": 900
+    "mission": {
+      "intervalSeconds": 2100,
+      "activeSeconds": 300,
+      "anchorUtc": "2026-10-05T03:45:30Z"
     }
   },
-  "mission": {
-    "intervalSeconds": 2100,
-    "activeSeconds": 300
+  "droids": [
+    {
+      "name": "Mouse",
+      "type": "Worker",
+      "rarity": "Common",
+      "base": 2
+    },
+    {
+      "name": "NAV-EX",
+      "type": "Battle",
+      "rarity": "Rare",
+      "base": 18
+    },
+    {
+      "name": "VECT-Arm",
+      "type": "Battle",
+      "rarity": "Rare",
+      "base": 27
+    },
+    {
+      "name": "HOV-R",
+      "type": "Battle",
+      "rarity": "Rare",
+      "base": 62
+    },
+    {
+      "name": "Groundmech",
+      "type": "Worker",
+      "rarity": "Epic",
+      "base": 120
+    },
+    {
+      "name": "L0",
+      "type": "Worker",
+      "rarity": "Epic",
+      "base": 240
+    },
+    {
+      "name": "AMP Walker",
+      "type": "Worker",
+      "rarity": "Epic",
+      "base": 570
+    },
+    {
+      "name": "SEN-TRI",
+      "type": "Worker",
+      "rarity": "Epic",
+      "base": 510
+    },
+    {
+      "name": "Opti-Pod",
+      "type": "Worker",
+      "rarity": "Epic",
+      "base": 380
+    },
+    {
+      "name": "BB",
+      "type": "Astromech",
+      "rarity": "Epic",
+      "base": 150
+    },
+    {
+      "name": "R2",
+      "type": "Astromech",
+      "rarity": "Epic",
+      "base": 360
+    },
+    {
+      "name": "R6",
+      "type": "Astromech",
+      "rarity": "Epic",
+      "base": 300
+    },
+    {
+      "name": "TRAK-R",
+      "type": "Astromech",
+      "rarity": "Epic",
+      "base": 330
+    },
+    {
+      "name": "ORB-Walker",
+      "type": "Astromech",
+      "rarity": "Epic",
+      "base": 180
+    },
+    {
+      "name": "Util-Tec",
+      "type": "Astromech",
+      "rarity": "Epic",
+      "base": 210
+    },
+    {
+      "name": "B1 Heavy",
+      "type": "Battle",
+      "rarity": "Epic",
+      "base": 630
+    },
+    {
+      "name": "B2 Super",
+      "type": "Battle",
+      "rarity": "Epic",
+      "base": 420
+    },
+    {
+      "name": "B2 Heavy",
+      "type": "Battle",
+      "rarity": "Epic",
+      "base": 480
+    },
+    {
+      "name": "Strike-Orb",
+      "type": "Battle",
+      "rarity": "Epic",
+      "base": 540
+    },
+    {
+      "name": "Haul-R",
+      "type": "Battle",
+      "rarity": "Epic",
+      "base": 270
+    },
+    {
+      "name": "LNG-Shot",
+      "type": "Battle",
+      "rarity": "Epic",
+      "base": 450
+    },
+    {
+      "name": "Proto-Roller",
+      "type": "Battle",
+      "rarity": "Epic",
+      "base": 972
+    },
+    {
+      "name": "Mecha-Droid",
+      "type": "Worker",
+      "rarity": "Legendary",
+      "base": 1040
+    },
+    {
+      "name": "Mono-WLKR",
+      "type": "Worker",
+      "rarity": "Legendary",
+      "base": 1120
+    },
+    {
+      "name": "BB9",
+      "type": "Astromech",
+      "rarity": "Legendary",
+      "base": 900
+    },
+    {
+      "name": "R7",
+      "type": "Astromech",
+      "rarity": "Legendary",
+      "base": 1190
+    },
+    {
+      "name": "B2-RP",
+      "type": "Battle",
+      "rarity": "Legendary",
+      "base": 1400
+    },
+    {
+      "name": "Cyclo-Grav",
+      "type": "Battle",
+      "rarity": "Legendary",
+      "base": 1260
+    },
+    {
+      "name": "Opti-STRK",
+      "type": "Battle",
+      "rarity": "Legendary",
+      "base": 1510
+    }
+  ],
+  "fusionRecipes": [
+    {
+      "name": "WHL-EX",
+      "rarity": "Rare",
+      "type": "Worker",
+      "ingredients": [
+        "Mouse",
+        "Mouse",
+        "ARG"
+      ]
+    },
+    {
+      "name": "ZRO-TEC",
+      "rarity": "Rare",
+      "type": "Astromech",
+      "ingredients": [
+        "ID10",
+        "ID10",
+        "2BB"
+      ]
+    },
+    {
+      "name": "BTL-R",
+      "rarity": "Rare",
+      "type": "Battle",
+      "ingredients": [
+        "B1 Battle",
+        "R9",
+        "BDX Explorer"
+      ]
+    },
+    {
+      "name": "N-UL",
+      "rarity": "Epic",
+      "type": "Worker",
+      "ingredients": [
+        "B1 Heavy",
+        "Gunrunner",
+        "BB"
+      ]
+    },
+    {
+      "name": "SCRP-R",
+      "rarity": "Epic",
+      "type": "Astromech",
+      "ingredients": [
+        "Gonk",
+        "Groundmech",
+        "R6"
+      ]
+    },
+    {
+      "name": "ARM-CORE",
+      "rarity": "Epic",
+      "type": "Battle",
+      "ingredients": [
+        "ARG",
+        "ARG",
+        "B2 Heavy"
+      ]
+    },
+    {
+      "name": "OPT-AR",
+      "rarity": "Epic",
+      "type": "Battle",
+      "ingredients": [
+        "R2",
+        "R2",
+        "B2 Super"
+      ]
+    },
+    {
+      "name": "RO-TOR",
+      "rarity": "Legendary",
+      "type": "Worker",
+      "ingredients": [
+        "BB9",
+        "Pit",
+        "B1 Battle"
+      ]
+    },
+    {
+      "name": "FUS-3",
+      "rarity": "Legendary",
+      "type": "Worker",
+      "ingredients": [
+        "B-U4D",
+        "B-U4D",
+        "R7"
+      ]
+    },
+    {
+      "name": "ORB-XL",
+      "rarity": "Legendary",
+      "type": "Battle",
+      "ingredients": [
+        "CB",
+        "Gunrunner",
+        "B2-RP"
+      ]
+    },
+    {
+      "name": "QIK-BIT",
+      "rarity": "Legendary",
+      "type": "Astromech",
+      "ingredients": [
+        "Groundmech",
+        "Groundmech",
+        "BB9"
+      ]
+    },
+    {
+      "name": "RIV-3T",
+      "rarity": "Mythic",
+      "type": "Worker",
+      "ingredients": [
+        "KX",
+        "IG",
+        "RIC"
+      ]
+    },
+    {
+      "name": "LUG-G",
+      "rarity": "Mythic",
+      "type": "Worker",
+      "ingredients": [
+        "Loadlifter",
+        "ID10",
+        "R5"
+      ]
+    },
+    {
+      "name": "LOW-MO",
+      "rarity": "Mythic",
+      "type": "Astromech",
+      "ingredients": [
+        "A-LT",
+        "A-LT",
+        "Loadlifter"
+      ]
+    },
+    {
+      "name": "AXL-POD",
+      "rarity": "Mythic",
+      "type": "Astromech",
+      "ingredients": [
+        "RIC",
+        "BDX Explorer",
+        "R7"
+      ]
+    },
+    {
+      "name": "SRV-0",
+      "rarity": "Mythic",
+      "type": "Battle",
+      "ingredients": [
+        "RIC-1200",
+        "B1 Heavy",
+        "B1 Heavy"
+      ]
+    },
+    {
+      "name": "X-ONK",
+      "rarity": "Mythic",
+      "type": "Battle",
+      "ingredients": [
+        "KX",
+        "KX",
+        "Gonk"
+      ]
+    }
+  ],
+  "nova": {
+    "surges": {
+      "beskar": 100,
+      "galactic": 150,
+      "stellar": 300,
+      "kyber": 450
+    },
+    "craftingBoost": {
+      "price": 150,
+      "durationMinutes": 15
+    }
   },
-  "droids": [],
-  "fusionRecipes": []
+  "updateState": {
+    "lastAutomatedCheck": null,
+    "pendingChanges": []
+  }
 }
