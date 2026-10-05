@@ -1,6 +1,6 @@
 name: Update Kyber live data
 
-on:
+"on":
   workflow_dispatch:
   schedule:
     - cron: "2 * * * *"
