@@ -1,0 +1,194 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#08111c"><title>Kyber Tool v1.4.1</title><style>*{box-sizing:border-box}body{margin:0;background:#07101a;color:#eef6ff;font-family:system-ui,-apple-system,sans-serif}header{padding:14px 14px 10px;background:#0b1724;position:sticky;top:0;z-index:5;border-bottom:1px solid #26394b}header small{font-size:9px;letter-spacing:.18em;color:#79aeda}h1{margin:2px 0 10px;font-size:25px}input,select{width:100%;background:#07121d;border:1px solid #2c4256;border-radius:10px;padding:11px;color:#fff}nav{display:flex;gap:5px;overflow:auto;padding:8px;position:sticky;top:101px;z-index:4;background:#08131e;border-bottom:1px solid #1d3040}button{border:1px solid #29445a;background:#122536;color:#edf6ff;border-radius:10px;padding:10px;font-weight:750}nav button.on{background:#176da9}main{max-width:900px;margin:auto;padding:12px 12px 38px}.page{display:none}.page.show{display:block}.hero,.card,.note{background:#0e1b28;border:1px solid #263d50;border-radius:14px;padding:14px;margin-bottom:11px}.hero{background:linear-gradient(135deg,#10314b,#111d29)}h2,h3{margin-top:0}.hero p,.card p,.muted{color:#9eafbd;line-height:1.45}.tiles{display:grid;grid-template-columns:1fr 1fr;gap:8px}.tiles button{text-align:left;min-height:92px}.tiles b,.tiles span{display:block}.tiles b{font-size:15px}.tiles span{font-size:10px;color:#8fa5b7;margin-top:4px}.title{display:flex;justify-content:space-between;align-items:center;margin:7px 2px 11px}.title h2{margin:0}.title span{font-size:10px;color:#8da4b6}.filters{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-bottom:9px}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}.droid{background:#0c1925;border:1px solid #263c4e;border-radius:13px;padding:10px;position:relative}.droid.owned{outline:2px solid #3aa267}.pic{height:75px;background:radial-gradient(circle,#203b52,#09131d 72%);border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:34px;margin-bottom:8px}.name{font-weight:850}.meta,.income,.recipe{font-size:10px;color:#93a8b8;margin-top:4px}.income b{color:#dbeaff}.badge{display:inline-block;border:1px solid #35536b;border-radius:999px;padding:3px 6px;font-size:9px;margin-top:6px}.fusionCard{cursor:pointer}.recipe{line-height:1.5}.planner{display:grid;gap:6px}.ingredient{display:flex;justify-content:space-between;background:#08141f;padding:9px;border-radius:9px}.yes{color:#78d998}.no{color:#ff9d9d}.timers{display:grid;grid-template-columns:repeat(2,1fr);gap:7px}.timer{background:#08141f;padding:10px;border-radius:10px}.timer b{font-size:22px;display:block}.timer span{font-size:9px;text-transform:uppercase;color:#8fa7ba}.wikiItem{border-bottom:1px solid #203342;padding:11px 0}.wikiItem:last-child{border:0}.warning{border-color:#655b2c;color:#e5d78d}.source{font-size:9px;color:#718899;margin-top:8px}@media(min-width:650px){.grid{grid-template-columns:repeat(3,1fr)}.tiles{grid-template-columns:repeat(5,1fr)}}.alertControls{display:grid;gap:8px}.alertRow{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;background:#08141f;border-radius:10px;padding:10px}.alertRow small{display:block;color:#8fa7ba;margin-top:2px}.switch{min-width:58px}.switch.off{opacity:.55}.alertStatus{font-size:10px;color:#8da4b6;margin-top:8px}.nextSpawn{border:1px solid #35536b;background:#091825;border-radius:12px;padding:12px;margin-bottom:9px}.nextSpawn b{font-size:20px}.nextSpawn small{display:block;color:#8fa7ba;margin-top:3px}.alertBar{position:fixed;left:10px;right:10px;bottom:10px;z-index:20;background:#15283a;border:1px solid #42637d;border-radius:13px;padding:12px;box-shadow:0 10px 30px #0008;display:none}.alertBar.show{display:flex;justify-content:space-between;gap:10px;align-items:center}.alertBar button{padding:7px 10px}.settingsGrid{display:grid;grid-template-columns:1fr 1fr;gap:8px}.statusGood{color:#78d998}.statusWarn{color:#e5d78d}
+.shopHead{display:flex;align-items:end;justify-content:space-between;gap:8px;margin-bottom:10px}
+.shopHead h3{margin:0}.currencyPill{font-size:10px;padding:5px 8px;border:1px solid #6b5521;background:#211b0b;border-radius:999px;color:#ffd96a}
+.shopGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+.shopItem{position:relative;overflow:hidden;border:1px solid #304b61;border-radius:13px;background:linear-gradient(180deg,#173148,#0a1621);min-height:176px}
+.shopArt{height:105px;display:flex;align-items:center;justify-content:center;background:radial-gradient(circle at 50% 42%,#365d78 0,#18364b 38%,#09141f 76%);font-size:49px;position:relative}
+.shopArt .code{font-size:22px;font-weight:950;letter-spacing:-.04em;color:#dcecff;text-shadow:0 2px 8px #000}
+.shopArt .mini{position:absolute;right:7px;top:7px;font-size:8px;padding:4px 6px;border-radius:999px;background:#07111bd9;border:1px solid #46657b;color:#bcd1e1}
+.shopInfo{padding:9px}.shopName{font-weight:900;font-size:12px;line-height:1.15}.shopSub{font-size:9px;color:#8da6b8;margin-top:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.shopPrice{margin-top:7px;display:flex;align-items:center;gap:5px;font-weight:900;color:#ffd35d}.shopPrice .coin{width:17px;height:17px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;background:#f0b72c;color:#281d00;font-size:10px}
+.shopItem.featured{border-color:#8b7130;box-shadow:inset 0 0 0 1px #574719}.shopItem.featured:before{content:"FEATURED";position:absolute;z-index:2;left:7px;top:7px;font-size:7px;font-weight:950;letter-spacing:.12em;background:#d5a72e;color:#1b1300;padding:4px 6px;border-radius:5px}
+.shopTabs{display:flex;gap:6px;overflow:auto;margin:0 0 10px}.shopTabs span{flex:0 0 auto;font-size:9px;padding:7px 9px;border-radius:8px;border:1px solid #29445a;background:#0b1925}.shopTabs .active{background:#214f70;border-color:#4d86aa}
+@media(min-width:650px){.shopGrid{grid-template-columns:repeat(4,1fr)}}
+.eventShell{background:linear-gradient(180deg,#102d25,#071714 42%,#07120f);border:2px solid #8bff22;border-radius:16px;padding:11px;box-shadow:0 0 22px #55ff1826 inset}.eventTitle{display:flex;align-items:center;justify-content:space-between;border-bottom:2px solid #82ff20;padding:3px 3px 10px;font-weight:950;font-style:italic;font-size:21px}.eventTitle span{color:#87ff1e}.eventTitle b{font-size:9px;color:#aaff4b}.eventTabs{display:flex;gap:6px;overflow:auto;padding:10px 0}.eventTab{white-space:nowrap;padding:8px 10px;border-radius:6px;background:#0b1d24;border:1px solid #d7f4ff;color:#8dff32;font-size:9px}.eventTab.on{background:#78f51e;color:#11200b;border-color:#a5ff5e}.eventGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.eventItem{display:block;padding:0;overflow:hidden;text-align:left;background:#092b3c;border:2px solid #93ff30;border-radius:9px;min-width:0}.eventItem[hidden]{display:none}.eventArt{aspect-ratio:1.15/1;overflow:hidden;background:radial-gradient(circle,#168cc4,#034a79 55%,#05273d)}.eventArt{position:relative;display:flex;align-items:center;justify-content:center;background:radial-gradient(circle at 50% 43%,#188fd1 0,#075b9b 45%,#063457 76%,#071b2b 100%);background-image:radial-gradient(#55c7ff55 1px,transparent 1px),radial-gradient(circle at 50% 43%,#188fd1 0,#075b9b 45%,#063457 76%,#071b2b 100%);background-size:13px 13px,auto}.eventArt:after{content:"";position:absolute;inset:7px;border:1px solid #b9f3ff33;clip-path:polygon(7% 0,93% 0,100% 7%,100% 93%,93% 100%,7% 100%,0 93%,0 7%);pointer-events:none}.eventArt img{max-width:78%;max-height:78%;width:auto;height:auto;object-fit:contain;display:block;filter:drop-shadow(0 5px 7px #00111dcc);border-radius:8px}.eventBar{display:flex;align-items:center;justify-content:space-between;gap:5px;background:#79ef20;color:#10200a;padding:5px 6px;font-style:italic}.eventBar b{font-size:10px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.eventBar span{display:flex;align-items:center;gap:2px;font-weight:950;font-size:10px}.eventBar i{font-style:normal;background:#173c29;color:#a9ff55;border-radius:50%;width:16px;height:16px;display:inline-flex;align-items:center;justify-content:center;font-size:8px}.eventItem small{display:block;text-align:center;padding:4px;background:#102a35;color:#e9fbff;font-size:7px;font-weight:850;letter-spacing:.08em}.eventFoot{font-size:8px;color:#789589;margin-top:10px}@media(min-width:650px){.eventGrid{grid-template-columns:repeat(4,1fr)}}
+nav{scrollbar-width:none;-webkit-overflow-scrolling:touch}nav::-webkit-scrollbar{display:none}nav button{flex:0 0 auto;min-width:auto;padding:9px 12px;white-space:nowrap}nav button[data-page="eventshop"]{min-width:92px}
+@media(max-width:430px){.eventTitle{font-size:19px}.eventTabs{gap:5px}.eventTab{padding:8px 9px;font-size:8px}.eventGrid{gap:8px}.eventBar b{font-size:9px}}
+
+.dealHero{border-color:#4fe55d;background:linear-gradient(155deg,#101c18,#0a1110)}
+.dealTop{display:flex;align-items:flex-start;justify-content:space-between;gap:10px}.dealTop h2{margin:2px 0 0}.eyebrow{font-size:8px;letter-spacing:.16em;color:#77ef82;font-weight:900}
+.statusPill{font-size:8px;font-weight:900;padding:5px 7px;border:1px solid #607069;border-radius:999px;color:#9da9a4}.statusPill.live{color:#74f080;border-color:#4dbb58}.statusPill.offline{color:#ff8e8e;border-color:#a84b4b}
+.dealDisplay{display:flex;align-items:center;gap:12px;margin:15px 0}.dealBadge{width:64px;height:64px;flex:0 0 64px;border-radius:13px;border:1px solid #39544a;background:radial-gradient(circle at 40% 35%,#315348,#14221d 62%,#0b100e);display:grid;place-items:center;font-size:28px;font-weight:950;color:#79ef83}.dealCopy{min-width:0}.dealName{font-size:20px;font-weight:950;line-height:1.05}.muted{color:#82938c;font-size:9px;margin-top:5px}
+.dealCountdown{display:flex;align-items:end;justify-content:space-between;border-top:1px solid #25352f;border-bottom:1px solid #25352f;padding:10px 0;margin:8px 0 10px}.dealCountdown span{font-size:8px;color:#7d9189;font-weight:900;letter-spacing:.12em}.dealCountdown b{font-size:27px;font-variant-numeric:tabular-nums}.miniNotice{font-size:9px;color:#879991;line-height:1.45;margin:9px 0}.dataRows{display:grid;gap:0}.dataRows div{display:flex;justify-content:space-between;gap:14px;padding:10px 0;border-bottom:1px solid #24302c;font-size:9px}.dataRows div:last-child{border-bottom:0}.dataRows span{text-align:right;color:#879991}
+</style></head><body><header><small>KYBER TOOL • GITHUB BUILD v1.4.1</small><h1>Kyber Tool</h1><input id="search" placeholder="Search Droidex…"></header>
+<nav><button data-page="home" class="on">Home</button><button data-page="droidex">Droidex</button><button data-page="fusion">Fusion</button><button data-page="tracker">Tracker</button><button data-page="wiki">Wiki</button><button data-page="live">Live</button><button data-page="deals">Deals</button></nav><main>
+<section id="home" class="page show"><div class="hero"><h2>All-in-one Droid Tycoon companion</h2><p>Droidex, collection tracking, fusion planning, game reference and live data in one phone-first tool.</p></div><div class="tiles"><button data-go="droidex"><b>Droidex</b><span>Verified droid data</span></button><button data-go="fusion"><b>Fusion</b><span>17 recipes + planner</span></button><button data-go="tracker"><b>Tracker</b><span>Your collection</span></button><button data-go="wiki"><b>Wiki</b><span>Mechanics & reference</span></button><button data-go="live"><b>Live</b><span>Timers + deal</span></button></div><div class="card"><h3>v0.3 data policy</h3><p>Kyber Tool only exposes records that have been checked against current sources. This build intentionally contains a verified Droidex subset while the full current catalogue and portrait library are assembled.</p></div></section>
+<section id="droidex" class="page"><div class="title"><h2>Droidex</h2><span id="ownedCount"></span></div><div class="filters"><select id="typeFilter"><option value="">All types</option><option>Worker</option><option>Astromech</option><option>Battle</option></select><select id="rarityFilter"><option value="">All rarities</option><option>Common</option><option>Rare</option><option>Epic</option><option>Legendary</option></select></div><div id="droidGrid" class="grid"></div><div class="source">Income table: current cross-reference dataset. Specialist work-area bonus is +10% where applicable.</div></section>
+<section id="fusion" class="page"><div class="title"><h2>Fusion Lab</h2><span>17 exclusive recipes</span></div><div class="card"><p>Fusion unlocks at Rebirth 3. A named recipe consumes three specified droids; the output quality is determined by the lowest-quality ingredient.</p></div><input id="fusionSearch" placeholder="Search recipe or ingredient…"><br><br><div id="fusionGrid" class="grid"></div></section>
+<section id="tracker" class="page"><div class="title"><h2>Fusion Planner</h2></div><div class="card"><select id="fusionPick"></select><div id="planner" class="planner"></div></div><div class="note">Mark droids you own in Droidex. Kyber Tool then shows which ingredients are present or missing. Full quantity/variant tracking is the next tracker layer.</div></section>
+<section id="wiki" class="page"><div class="title"><h2>Wiki</h2><span>v1.33.0 reference</span></div>
+<div class="card"><h3>Current Game Reference</h3><div class="wikiItem"><b>Current reviewed version</b><p>v1.33.0 • Gonk-O-Ween. Kyber Tool separates current confirmed/configured information from older patch data.</p></div>
+<div class="wikiItem"><b>Droidex</b><p>Current public catalog: 92 revealed droid types. Rainbow and Beskar remain valid finishes/variants, but they are not scheduled blueprint countdown boards. Live blueprint timers are Stellar, Mythic and Kyber only.</p></div>
+<div class="wikiItem"><b>World Missions</b><p>Five-minute missions start every 35 minutes in the normal cycle. Protocol-event timing can differ, so the live in-game board remains authoritative.</p></div>
+<div class="wikiItem"><b>Gonk-O-Ween</b><p>Treat earning runs Oct 3–Nov 1, 2026; spending remains available until Nov 8. Daily Treat visits reset at midnight UTC.</p></div>
+<div class="wikiItem"><b>Featured Event Shop</b><p>Six featured Treat offers rotate every hour from the configured event-shop pool.</p></div>
+<div class="wikiItem"><b>Nova / Surges</b><p>Current configured Nova surge prices: Beskar 100, Galactic 150, Stellar 300 and Kyber 450 Nova Crystals.</p></div>
+<div class="wikiItem"><b>Mini events</b><p>Dance Party/DJ and Mega Crate are recurring weekly mini-events. Their current public schedule is community-reported, so Kyber Tool labels it separately from verified game-data timers.</p></div>
+<div class="wikiItem"><b>Limited Deals</b><p>Current deal weighting includes Rainbow 5, Beskar 4, Galactic 3, Stellar 2 and Kyber 1. The Live page attempts to show the current Gonk deal.</p></div>
+<div class="wikiItem"><b>Super Crates</b><p>Current map population: 3 Gold, 3 Diamond and 2 Rainbow Super Crates. This is separate from weekly Mega Crate mini-events.</p></div>
+<div class="wikiItem"><b>Kyber</b><p>Kyber is a droid finish/variant with activation colours. It also has its own verified blueprint board; Rainbow and Beskar do not.</p></div>
+<div class="wikiItem"><b>Fusion</b><p>17 fixed recipes. Kyber-era fusion includes Stellar → Kyber behavior and activated Kyber colour rules.</p></div></div>
+<div class="note">Data policy: current game/patch data first, Gonk Tools and current Droidex as cross-checks, and the in-game board wins when a live timer disagrees. Last build verification: 5 Oct 2026.</div></section>
+<section id="live" class="page"><div class="title"><h2>Live</h2><span id="sync">connecting…</span></div>
+<div id="nextSpawn" class="nextSpawn"><small>NEXT ENABLED PRIORITY BLUEPRINT</small><b>Calculating…</b></div>
+<div class="card"><h3>Blueprint Timers</h3><div id="timers" class="timers"></div><div class="source">Stellar :05/:35 • Mythic :55 • Kyber :15. Clock-based and server-time corrected when Gonk server time is reachable.</div></div>
+<div class="card"><h3>World Mission</h3><div class="timer"><span>Next Mission</span><b id="missionTimer">checking…</b></div><div id="missionName" class="meta">Trying current Droidex live board…</div><div class="source">Every 35 minutes. At mission start the display automatically switches to MISSION ACTIVE and counts down the 5-minute active window, then returns to NEXT MISSION.</div></div><div class="card"><h3>Weekly Mini Events</h3><div id="weeklyEvent" class="wikiItem"><b>Checking schedule…</b><p></p></div><div class="source">Community schedule: Dance Party/DJ Tuesday and Mega Crate Thursday, 10am–1pm and 8pm–11pm US Eastern. In-game event board remains authoritative.</div></div>
+<div class="card"><h3>Gonk-O-Ween Live</h3><div class="timer"><span>Treat earning ends</span><b id="treatEarn">--</b></div><div class="timer"><span>Event shop closes</span><b id="treatSpend">--</b></div><div class="timer"><span>Featured shop refresh</span><b id="shopRotate">--</b></div><div class="source">Featured Gonk-O-Ween shop: 6 offers refreshed hourly. Daily Treat route resets at 00:00 UTC. The opening Mega Pumpkin weekend event has ended; it is not a permanent Mega Crate timer.</div></div>
+
+<div class="card"><h3>Alert Settings</h3><div class="settingsGrid"><div><label class="meta">Warning time</label><select id="warningMinutes"><option value="1">1 minute</option><option value="2">2 minutes</option><option value="5">5 minutes</option><option value="10">10 minutes</option><option value="15">15 minutes</option></select></div><div><label class="meta">Browser notifications</label><button id="notificationButton" style="width:100%">Check permission</button></div></div><div id="notificationStatus" class="alertStatus"></div><br><div id="alertControls" class="alertControls"></div></div>
+<div class="card"><h3>Limited Deal</h3><div id="deal">Checking…</div><br><button id="dealRefresh">Refresh</button><div class="source">Pulled from Gonk Tools when its live endpoint is reachable.</div></div>
+<div class="card"><h3>Nova Shop / Surges</h3>
+<div class="wikiItem"><b>Beskar Surge</b><p>100 Nova Crystals</p></div>
+<div class="wikiItem"><b>Galactic Surge</b><p>150 Nova Crystals</p></div>
+<div class="wikiItem"><b>Stellar Surge</b><p>300 Nova Crystals</p></div>
+<div class="wikiItem"><b>Kyber Surge</b><p>450 Nova Crystals</p></div>
+<div class="wikiItem"><b>Crafting Boost</b><p>150 Nova Crystals • 15 minutes</p></div>
+<div class="source">Configured current prices. These are shop/surge offers, not extra blueprint countdown boards.</div></div>
+<div class="card"><h3>Current Event</h3>
+<div class="wikiItem"><b>Gonk-O-Ween</b><p>Earn Treats until Nov 1, 20:00 UTC. Spend Treats until Nov 8, 20:00 UTC.</p></div>
+<div class="wikiItem"><b>Daily Treat route</b><p>5 player bases + 5 outskirts homes • 2 Treats each • 20 Treats/day normally • resets 00:00 UTC.</p></div>
+<div class="wikiItem"><b>Gonk-O-Ween Bundle</b><p>800 V-Bucks • 2× eligible Treats • Gonk-O-Ween Paint • DJ B0017 costume and DJ R-3X.</p></div>
+<div class="source">Reviewed v1.33.0 event data. The opening MNST4 pumpkin event ended Oct 4 and is not shown as active.</div></div>
+<div class="card"><h3>Current Data Status</h3><div class="wikiItem"><b>Game reference</b><p>v1.33.0 reviewed data • Gonk-O-Ween active season.</p></div><div class="wikiItem"><b>Live authority</b><p>If a live in-game board differs from this page, send a screenshot and the board wins while the source is rechecked.</p></div></div></section>
+<section id="deals" class="page">
+  <div class="card dealHero">
+    <div class="dealTop">
+      <div><div class="eyebrow">SANDCRAWLER • SECRET VENDOR</div><h2>Limited Deal</h2></div>
+      <span id="dealStatus" class="statusPill">CONNECTING</span>
+    </div>
+    <div class="dealDisplay">
+      <div id="dealBadge" class="dealBadge">?</div>
+      <div class="dealCopy">
+        <div id="dealName" class="dealName">Checking live deal…</div>
+        <div id="dealMeta" class="muted">Gonk Tools live feed</div>
+      </div>
+    </div>
+    <div class="dealCountdown"><span>DEAL CHANGES IN</span><b id="dealTimer">--:--</b></div>
+    <div id="dealNotice" class="miniNotice">Kyber Tool will refresh this automatically. If the live source is unreachable, it will clearly show OFFLINE rather than guessing.</div>
+    <button id="refreshDeal" class="primary">Refresh live deal</button>
+  </div>
+
+  <div class="card">
+    <h3>Live-data foundation</h3>
+    <div class="dataRows">
+      <div><b>Limited Deal</b><span id="dealSourceState">Live source</span></div>
+      <div><b>Blueprint timers</b><span>Locked verified local schedule</span></div>
+      <div><b>World Mission</b><span>Locked verified 35m / 5m cycle</span></div>
+      <div><b>Droidex / Fusion</b><span>Moving to central game-data layer</span></div>
+      <div><b>Artwork</b><span>Screenshot crops retired • clean assets only</span></div>
+    </div>
+  </div>
+</section>
+</main><div id="inAppAlert" class="alertBar"><div><b id="inAppAlertTitle"></b><div id="inAppAlertBody" class="meta"></div></div><button id="dismissAlert">Dismiss</button></div><script id="db" type="application/json">{"fusion":[{"name":"WHL-EX","rarity":"Rare","type":"Worker","ingredients":["Mouse","Mouse","ARG"]},{"name":"ZRO-TEC","rarity":"Rare","type":"Astromech","ingredients":["ID10","ID10","2BB"]},{"name":"BTL-R","rarity":"Rare","type":"Battle","ingredients":["B1 Battle","R9","BDX Explorer"]},{"name":"N-UL","rarity":"Epic","type":"Worker","ingredients":["B1 Heavy","Gunrunner","BB"]},{"name":"SCRP-R","rarity":"Epic","type":"Astromech","ingredients":["Gonk","Groundmech","R6"]},{"name":"ARM-CORE","rarity":"Epic","type":"Battle","ingredients":["ARG","ARG","B2 Heavy"]},{"name":"OPT-AR","rarity":"Epic","type":"Battle","ingredients":["R2","R2","B2 Super"]},{"name":"RO-TOR","rarity":"Legendary","type":"Worker","ingredients":["BB9","Pit","B1 Battle"]},{"name":"FUS-3","rarity":"Legendary","type":"Worker","ingredients":["B-U4D","B-U4D","R7"]},{"name":"ORB-XL","rarity":"Legendary","type":"Battle","ingredients":["CB","Gunrunner","B2-RP"]},{"name":"QIK-BIT","rarity":"Legendary","type":"Astromech","ingredients":["Groundmech","Groundmech","BB9"]},{"name":"RIV-3T","rarity":"Mythic","type":"Worker","ingredients":["KX","IG","RIC"]},{"name":"LUG-G","rarity":"Mythic","type":"Worker","ingredients":["Loadlifter","ID10","R5"]},{"name":"LOW-MO","rarity":"Mythic","type":"Astromech","ingredients":["A-LT","A-LT","Loadlifter"]},{"name":"AXL-POD","rarity":"Mythic","type":"Astromech","ingredients":["RIC","BDX Explorer","R7"]},{"name":"SRV-0","rarity":"Mythic","type":"Battle","ingredients":["RIC-1200","B1 Heavy","B1 Heavy"]},{"name":"X-ONK","rarity":"Mythic","type":"Battle","ingredients":["KX","KX","Gonk"]}],"droids":[{"name":"Mouse","type":"Worker","rarity":"Common","base":2},{"name":"NAV-EX","type":"Battle","rarity":"Rare","base":18},{"name":"VECT-Arm","type":"Battle","rarity":"Rare","base":27},{"name":"HOV-R","type":"Battle","rarity":"Rare","base":62},{"name":"Groundmech","type":"Worker","rarity":"Epic","base":120},{"name":"L0","type":"Worker","rarity":"Epic","base":240},{"name":"AMP Walker","type":"Worker","rarity":"Epic","base":570},{"name":"SEN-TRI","type":"Worker","rarity":"Epic","base":510},{"name":"Opti-Pod","type":"Worker","rarity":"Epic","base":380},{"name":"BB","type":"Astromech","rarity":"Epic","base":150},{"name":"R2","type":"Astromech","rarity":"Epic","base":360},{"name":"R6","type":"Astromech","rarity":"Epic","base":300},{"name":"TRAK-R","type":"Astromech","rarity":"Epic","base":330},{"name":"ORB-Walker","type":"Astromech","rarity":"Epic","base":180},{"name":"Util-Tec","type":"Astromech","rarity":"Epic","base":210},{"name":"B1 Heavy","type":"Battle","rarity":"Epic","base":630},{"name":"B2 Super","type":"Battle","rarity":"Epic","base":420},{"name":"B2 Heavy","type":"Battle","rarity":"Epic","base":480},{"name":"Strike-Orb","type":"Battle","rarity":"Epic","base":540},{"name":"Haul-R","type":"Battle","rarity":"Epic","base":270},{"name":"LNG-Shot","type":"Battle","rarity":"Epic","base":450},{"name":"Proto-Roller","type":"Battle","rarity":"Epic","base":972},{"name":"Mecha-Droid","type":"Worker","rarity":"Legendary","base":1040},{"name":"Mono-WLKR","type":"Worker","rarity":"Legendary","base":1120},{"name":"BB9","type":"Astromech","rarity":"Legendary","base":900},{"name":"R7","type":"Astromech","rarity":"Legendary","base":1190},{"name":"B2-RP","type":"Battle","rarity":"Legendary","base":1400},{"name":"Cyclo-Grav","type":"Battle","rarity":"Legendary","base":1260},{"name":"Opti-STRK","type":"Battle","rarity":"Legendary","base":1510}]}</script><script>const DATA=JSON.parse(document.getElementById("db").textContent),$=x=>document.getElementById(x);let owned=new Set(JSON.parse(localStorage.getItem("kyber-owned")||"[]")),schedules={stellar:[1800,300],mythic:[3600,3300],kyber:[3600,900]},offset=0;
+function page(p){document.querySelectorAll(".page").forEach(x=>x.classList.toggle("show",x.id===p));document.querySelectorAll("nav button").forEach(x=>x.classList.toggle("on",x.dataset.page===p));scrollTo(0,0)}document.querySelectorAll("[data-page]").forEach(b=>b.onclick=()=>page(b.dataset.page));document.querySelectorAll("[data-go]").forEach(b=>b.onclick=()=>page(b.dataset.go));
+const money=n=>n>=1e6?(n/1e6).toFixed(2)+"m":n>=1e3?(n/1e3).toFixed(2)+"k":String(n);
+function save(){localStorage.setItem("kyber-owned",JSON.stringify([...owned]));renderDroids();renderPlanner()}
+function renderDroids(){let q=$("search").value.toLowerCase(),typ=$("typeFilter").value,rar=$("rarityFilter").value;let a=DATA.droids.filter(d=>(d.name+" "+d.type+" "+d.rarity).toLowerCase().includes(q)&&(!typ||d.type===typ)&&(!rar||d.rarity===rar));$("droidGrid").innerHTML=a.map(d=>`<div class="droid ${owned.has(d.name)?"owned":""}" data-own="${d.name}"><div class="pic">🤖</div><div class="name">${d.name}</div><div class="meta">${d.rarity} • ${d.type}</div><div class="income"><b>${money(d.base)}/s</b> base • ${money(d.base*2)} gold • ${money(d.base*4)} diamond • ${money(d.base*8)} rainbow</div><span class="badge">${owned.has(d.name)?"✓ Collected":"Mark collected"}</span></div>`).join("");document.querySelectorAll("[data-own]").forEach(e=>e.onclick=()=>{owned.has(e.dataset.own)?owned.delete(e.dataset.own):owned.add(e.dataset.own);save()});$("ownedCount").textContent=`${owned.size} marked`}
+function renderFusion(){let q=$("fusionSearch").value.toLowerCase();$("fusionGrid").innerHTML=DATA.fusion.filter(f=>(f.name+" "+f.ingredients.join(" ")).toLowerCase().includes(q)).map(f=>`<div class="droid fusionCard" data-fuse="${f.name}"><div class="pic">⚗️</div><div class="name">${f.name}</div><div class="meta">${f.rarity} • ${f.type}</div><div class="recipe">${f.ingredients.join(" + ")}</div></div>`).join("");document.querySelectorAll("[data-fuse]").forEach(e=>e.onclick=()=>{let f=DATA.fusion.find(x=>x.name===e.dataset.fuse);$("fusionPick").value=f.name;renderPlanner()})}
+function renderPlanner(){let f=DATA.fusion.find(x=>x.name===$("fusionPick").value)||DATA.fusion[0],counts={};f.ingredients.forEach(x=>counts[x]=(counts[x]||0)+1);$("planner").innerHTML=`<h3>${f.name}</h3>`+Object.entries(counts).map(([n,c])=>`<div class="ingredient"><span>${c}× ${n}</span><b class="${owned.has(n)?"yes":"no"}">${owned.has(n)?"OWNED":"NEEDED"}</b></div>`).join("")+`<p class="muted">Result quality follows the lowest-quality ingredient.</p>`}
+$("fusionPick").innerHTML=DATA.fusion.map(f=>`<option>${f.name}</option>`).join("");$("fusionPick").onchange=renderPlanner;$("fusionSearch").oninput=renderFusion;$("search").oninput=renderDroids;$("typeFilter").onchange=renderDroids;$("rarityFilter").onchange=renderDroids;renderDroids();renderFusion();renderPlanner();
+function fmt(s){s=Math.ceil(s);return`${String(Math.floor(s/60)).padStart(2,"0")}:${String(s%60).padStart(2,"0")}`}function timers(){$("timers").innerHTML=Object.entries(schedules).map(([k,[i,o]])=>{let n=Math.floor(Date.now()/1000+offset),left=i-(((n-o)%i+i)%i);return`<div class="timer"><span>${k}</span><b>${fmt(left)}</b></div>`}).join("")}
+async function sync(){try{let a=Date.now(),r=await fetch("https://gonk.tools/api/droid-alerts/spawn-schedule",{cache:"no-store"}),p=await r.json(),b=Date.now();offset=(p.serverTimeMs-(a+b)/2)/1000;$("sync").textContent="Gonk server synced"}catch{$("sync").textContent="offline fallback"}timers()}
+async function deal(){try{let r=await fetch("./data/live-data.json",{cache:"no-store"}),p=await r.json(),d=p.deal;$("deal").innerHTML=`<div class="name">${d.droid}</div><div class="meta">${d.mutation} • ${d.rarity} • ends ${new Date(d.endsAt).toLocaleTimeString([],{hour:"numeric",minute:"2-digit"})}</div>`}catch{$("deal").innerHTML='<span class="muted">Live deal feed unavailable in this browser. Gonk Tools remains the live deal authority.</span>'}}$("dealRefresh").onclick=deal;sync();deal();setInterval(timers,1000);setInterval(sync,600000);setInterval(deal,60000);
+function longFmt(sec){sec=Math.max(0,Math.ceil(sec));let d=Math.floor(sec/86400),h=Math.floor(sec%86400/3600),m=Math.floor(sec%3600/60),s=sec%60;return(d?d+"d ":"")+(h?String(h).padStart(2,"0")+":":"")+String(m).padStart(2,"0")+":"+String(s).padStart(2,"0")}
+function liveExtras(){let now=Date.now()+offset*1000,earn=Date.parse("2026-11-01T20:00:00Z"),spend=Date.parse("2026-11-08T20:00:00Z");$("treatEarn").textContent=now<earn?longFmt((earn-now)/1000):"ENDED";$("treatSpend").textContent=now<spend?longFmt((spend-now)/1000):"CLOSED";let n=Math.floor(now/1000),hour=3600;$("shopRotate").textContent=fmt(hour-(n%hour))}
+liveExtras();setInterval(liveExtras,1000);
+const MISSION_INTERVAL=35*60;
+// Verified from two in-game screenshots on 5 Oct 2026:
+// mission targets 12:35:30 and 13:45:30 Townsville (70 min = two exact cycles).
+// Anchor stored as UTC epoch; subsequent missions repeat every 35 minutes.
+const MISSION_ANCHOR_MS=Date.parse("2026-10-05T03:45:30Z");
+function missionState(){
+  let now=Date.now()+offset*1000, interval=MISSION_INTERVAL*1000;
+  let since=((now-MISSION_ANCHOR_MS)%interval+interval)%interval;
+  // Anchor is mission START. First 5 minutes are the active mission.
+  if(since < 5*60*1000){
+    return {active:true,left:(5*60*1000-since)/1000};
+  }
+  return {active:false,left:(interval-since)/1000};
+}
+function renderMission(){
+  let m=missionState();
+  $("missionTimer").textContent=fmt(m.left);
+  $("missionName").textContent=m.active?"MISSION ACTIVE • 5-minute mission window":"NEXT MISSION • 35-minute cycle";
+  $("missionTimer").parentElement.style.outline=m.active?"2px solid #d5d927":"";
+}
+renderMission();setInterval(renderMission,1000);
+function weeklyMiniEvent(){let now=Date.now()+offset*1000,d=new Date(now),DAY=86400000,H=3600000;function cand(day,h){let cur=d.getUTCDay(),add=(day-cur+7)%7,b=Date.UTC(d.getUTCFullYear(),d.getUTCMonth(),d.getUTCDate()+add,h+4);if(b<now)b+=7*DAY;return b}let a=[["Dance Party",cand(2,10),3*H],["Dance Party",cand(2,20),3*H],["Mega Crate",cand(4,10),3*H],["Mega Crate",cand(4,20),3*H]];a.forEach(x=>{if(x[1]-7*DAY<=now&&now<x[1]-7*DAY+x[2])x[1]-=7*DAY});a.sort((x,y)=>x[1]-y[1]);let live=a.find(x=>x[1]<=now&&now<x[1]+x[2]),box=$("weeklyEvent");if(live)box.innerHTML=`<b>${live[0]} LIVE</b><p>${longFmt((live[1]+live[2]-now)/1000)} remaining in the scheduled window.</p>`;else{let n=a.find(x=>x[1]>now);box.innerHTML=`<b>Next: ${n[0]}</b><p>${longFmt((n[1]-now)/1000)} until the community-scheduled window.</p>`}}
+weeklyMiniEvent();setInterval(weeklyMiniEvent,1000);
+const KYBER_ALERT_KEYS=["stellar","mythic","kyber"];
+let kyberAlerts=JSON.parse(localStorage.getItem("kyber-alerts")||"null")||{stellar:true,mythic:true,kyber:true};
+let warningMinutes=+(localStorage.getItem("kyber-warning-minutes")||5),kyberLastAlert={};
+KYBER_ALERT_KEYS.forEach(k=>{if(typeof kyberAlerts[k]!=="boolean")kyberAlerts[k]=true});function saveKyberAlerts(){localStorage.setItem("kyber-alerts",JSON.stringify(Object.fromEntries(KYBER_ALERT_KEYS.map(k=>[k,kyberAlerts[k]]))));}
+function renderAlertControls(){const host=$("alertControls");host.innerHTML=KYBER_ALERT_KEYS.map(k=>`<div class="alertRow"><div><b>${k[0].toUpperCase()+k.slice(1)}</b><small>${kyberAlerts[k]?`Alert ${warningMinutes} min before spawn`:"Alerts disabled"}</small></div><button class="switch ${kyberAlerts[k]?"":"off"}" data-alert="${k}">${kyberAlerts[k]?"ON":"OFF"}</button></div>`).join("");host.querySelectorAll("[data-alert]").forEach(b=>b.onclick=()=>{let k=b.dataset.alert;kyberAlerts[k]=!kyberAlerts[k];saveKyberAlerts();renderAlertControls();updateNextSpawn();});}
+function notificationState(){let supported="Notification" in window,status=$("notificationStatus"),btn=$("notificationButton");if(!supported){status.innerHTML='<span class="statusWarn">Browser notifications are not supported here. In-app alerts will still work while Kyber Tool is open.</span>';btn.textContent="Not supported";btn.disabled=true;return}if(Notification.permission==="granted"){status.innerHTML='<span class="statusGood">Notifications allowed. In-app alerts also remain active.</span>';btn.textContent="Notifications ON"}else if(Notification.permission==="denied"){status.innerHTML='<span class="statusWarn">Notifications are blocked in browser settings. In-app alerts still work while this page is open.</span>';btn.textContent="Blocked"}else{status.innerHTML='Tap the button to allow browser notifications. In-app alerts work without permission.';btn.textContent="Enable notifications"}}
+$("notificationButton").onclick=async()=>{if("Notification" in window&&Notification.permission==="default"){try{await Notification.requestPermission()}catch{}}notificationState()};
+$("warningMinutes").value=String(warningMinutes);$("warningMinutes").onchange=e=>{warningMinutes=+e.target.value;localStorage.setItem("kyber-warning-minutes",warningMinutes);kyberLastAlert={};renderAlertControls();updateNextSpawn()};
+function secondsLeft(k){let [interval,off]=schedules[k],now=Math.floor(Date.now()/1000+offset);return interval-(((now-off)%interval+interval)%interval)}
+function updateNextSpawn(){let enabled=KYBER_ALERT_KEYS.filter(k=>kyberAlerts[k]).map(k=>[k,secondsLeft(k)]).sort((a,b)=>a[1]-b[1]),box=$("nextSpawn");if(!enabled.length){box.innerHTML='<small>NEXT ENABLED PRIORITY SPAWN</small><b>No alerts enabled</b>';return}let [k,left]=enabled[0];box.innerHTML=`<small>NEXT ENABLED PRIORITY SPAWN</small><b>${k.toUpperCase()} • ${fmt(left)}</b><small>Alert set for ${warningMinutes} minute${warningMinutes===1?"":"s"} before spawn</small>`}
+function showInAppAlert(k,left){$("inAppAlertTitle").textContent=`${k.toUpperCase()} incoming`;$("inAppAlertBody").textContent=`About ${Math.max(1,Math.ceil(left/60))} minute${Math.ceil(left/60)===1?"":"s"} until the ${k} spawn.`;$("inAppAlert").classList.add("show")}
+$("dismissAlert").onclick=()=>$("inAppAlert").classList.remove("show");
+function checkKyberAlerts(){const now=Math.floor(Date.now()/1000+offset),threshold=warningMinutes*60;Object.entries(schedules).forEach(([k,[interval,off]])=>{if(!kyberAlerts[k])return;const left=interval-(((now-off)%interval+interval)%interval),spawn=Math.floor((now+left)/interval);if(left<=threshold&&left>0&&kyberLastAlert[k]!==spawn){kyberLastAlert[k]=spawn;showInAppAlert(k,left);if("Notification" in window&&Notification.permission==="granted"){try{new Notification(`Kyber Tool: ${k.toUpperCase()} incoming`,{body:`About ${Math.max(1,Math.ceil(left/60))} minute${Math.ceil(left/60)===1?"":"s"} until the ${k} spawn.`})}catch{}}}});updateNextSpawn()}
+renderAlertControls();notificationState();updateNextSpawn();setInterval(checkKyberAlerts,1000);
+
+const DEAL_ENDPOINTS=["./data/live-data.json"];
+let dealEndsAt=0,dealLastName="",dealPoll=null;
+function dealEls(){return {name:$("dealName"),meta:$("dealMeta"),timer:$("dealTimer"),status:$("dealStatus"),notice:$("dealNotice"),badge:$("dealBadge"),source:$("dealSourceState")}}
+function normaliseDeal(x){
+  const root=x?.data||x?.deal||x?.current||x||{};
+  const name=root.name||root.title||root.droid||root.displayName||root.item||root.dealName;
+  const variant=root.variant||root.tier||root.finish||root.rarityVariant||"";
+  const rarity=root.rarity||root.class||"";
+  let seconds=Number(root.secondsRemaining??root.seconds_remaining??root.remainingSeconds??root.ttl??root.nextDealSeconds);
+  let end=root.endsAt||root.endTime||root.expiresAt||root.expires_at||root.nextDealAt;
+  if(!Number.isFinite(seconds)&&end){const t=Date.parse(end);if(Number.isFinite(t))seconds=Math.max(0,(t-Date.now())/1000)}
+  if(!name)return null;
+  return {name:String(name),variant:String(variant||""),rarity:String(rarity||""),seconds:Number.isFinite(seconds)?seconds:null};
+}
+async function fetchLimitedDeal(){
+  const e=dealEls(); e.status.textContent="CONNECTING";e.status.className="statusPill";
+  let lastErr="";
+  for(const url of DEAL_ENDPOINTS){
+    try{
+      const r=await fetch(url,{cache:"no-store",headers:{"Accept":"application/json"}});
+      if(!r.ok)throw new Error("HTTP "+r.status);
+      const raw=await r.json(), d=normaliseDeal(raw);
+      if(!d)throw new Error("Unrecognised deal response");
+      dealEndsAt=d.seconds!==null?Date.now()+d.seconds*1000:0;
+      const changed=dealLastName&&dealLastName!==d.name; dealLastName=d.name;
+      e.name.textContent=[d.variant,d.name].filter(Boolean).join(" ");
+      e.meta.textContent=[d.rarity,d.variant,"Synced via GitHub"].filter(Boolean).join(" • ");
+      e.badge.textContent=(d.variant||d.name).trim().slice(0,1).toUpperCase();
+      e.status.textContent="LIVE";e.status.className="statusPill live";
+      e.source.textContent="LIVE • GitHub sync";
+      e.notice.textContent=changed?"New Limited Deal detected.":"Auto-refreshes so the Sandcrawler deal can change without rebuilding Kyber Tool.";
+      return true;
+    }catch(err){lastErr=String(err?.message||err)}
+  }
+  e.status.textContent="OFFLINE";e.status.className="statusPill offline";
+  e.source.textContent="Source unavailable";
+  e.name.textContent="Live deal unavailable";
+  e.meta.textContent="Open Gonk Tools or check the in-game Jawa";
+  e.notice.textContent="Kyber Tool did not guess the deal. The live source could not be reached from this browser ("+lastErr+").";
+  dealEndsAt=0;return false;
+}
+function tickDeal(){
+  const e=dealEls();
+  if(!dealEndsAt){e.timer.textContent="--:--";return}
+  const left=Math.max(0,Math.ceil((dealEndsAt-Date.now())/1000));
+  e.timer.textContent=String(Math.floor(left/60)).padStart(2,"0")+":"+String(left%60).padStart(2,"0");
+  if(left===0){dealEndsAt=0;setTimeout(fetchLimitedDeal,1200)}
+}
+$("refreshDeal")?.addEventListener("click",fetchLimitedDeal);
+fetchLimitedDeal(); setInterval(tickDeal,1000); setInterval(fetchLimitedDeal,60000);
+</script></body></html>
