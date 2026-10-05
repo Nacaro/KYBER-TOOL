@@ -1,0 +1,11 @@
+{
+  "updatedAt": null,
+  "source": "gonk.tools",
+  "status": "waiting-for-first-sync",
+  "deal": {
+    "name": "Waiting for first GitHub sync",
+    "variant": "",
+    "rarity": "",
+    "secondsRemaining": null
+  }
+}
