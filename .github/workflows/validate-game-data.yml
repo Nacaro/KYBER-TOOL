@@ -1,0 +1,47 @@
+name: Validate Kyber game data
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "data/game-data.json"
+      - "scripts/validate_game_data.py"
+      - "scripts/build_game_data_js.py"
+      - ".github/workflows/validate-game-data.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Kyber Tool
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Validate game database
+        run: python scripts/validate_game_data.py
+
+      - name: Build browser game database
+        run: python scripts/build_game_data_js.py
+
+      - name: Save generated browser database
+        run: |
+          git config user.name "kyber-tool-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/game-data.js
+
+          if git diff --cached --quiet; then
+            echo "Browser database already current."
+          else
+            git commit -m "Rebuild Kyber browser game data"
+            git push
+          fi
