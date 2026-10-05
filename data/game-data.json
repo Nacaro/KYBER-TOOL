@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-10-05",
+  "notes": [
+    "Central Kyber Tool game-data layer.",
+    "Game-verified values must not be silently overwritten by automated sources."
+  ],
+  "blueprintSchedule": {
+    "stellar": {
+      "intervalSeconds": 1800,
+      "offsetSeconds": 300
+    },
+    "mythic": {
+      "intervalSeconds": 3600,
+      "offsetSeconds": 3300
+    },
+    "kyber": {
+      "intervalSeconds": 3600,
+      "offsetSeconds": 900
+    }
+  },
+  "mission": {
+    "intervalSeconds": 2100,
+    "activeSeconds": 300
+  },
+  "droids": [],
+  "fusionRecipes": []
+}
