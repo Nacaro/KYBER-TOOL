@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-10-05T15:55:04.547602+00:00",
+  "updatedAt": "2026-10-05T22:32:15.135002+00:00",
   "source": "gonk.tools",
   "status": "live",
   "deal": {
-    "name": "Mecha-Droid",
+    "name": "B1 Heavy",
     "variant": "",
-    "rarity": "Legendary",
+    "rarity": "Epic",
     "secondsRemaining": null
   }
 }
