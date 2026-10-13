@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-10-12T22:52:44.779191+00:00",
+  "updatedAt": "2026-10-13T03:29:25.783660+00:00",
   "source": "gonk.tools",
   "status": "live",
   "deal": {
-    "name": "R6",
+    "name": "DRFT-R",
     "variant": "",
-    "rarity": "Epic",
+    "rarity": "Mythic",
     "secondsRemaining": null
   }
 }
