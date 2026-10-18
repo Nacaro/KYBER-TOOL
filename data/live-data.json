@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-10-18T14:29:34.216426+00:00",
+  "updatedAt": "2026-10-18T18:00:00.231526+00:00",
   "source": "gonk.tools",
   "status": "live",
   "deal": {
-    "name": "Groundmech",
+    "name": "Cyclo-Grav",
     "variant": "",
-    "rarity": "Epic",
+    "rarity": "Legendary",
     "secondsRemaining": null
   }
 }
