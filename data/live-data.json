@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-10-20T11:23:33.569288+00:00",
+  "updatedAt": "2026-10-20T16:49:07.244701+00:00",
   "source": "gonk.tools",
   "status": "live",
   "deal": {
-    "name": "RIC-1200",
+    "name": "Cyclo-Grav",
     "variant": "",
-    "rarity": "Mythic",
+    "rarity": "Legendary",
     "secondsRemaining": null
   }
 }
