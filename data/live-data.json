@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-10-20T05:54:09.393054+00:00",
+  "updatedAt": "2026-10-20T11:23:33.569288+00:00",
   "source": "gonk.tools",
   "status": "live",
   "deal": {
-    "name": "B2-RP",
+    "name": "RIC-1200",
     "variant": "",
-    "rarity": "Legendary",
+    "rarity": "Mythic",
     "secondsRemaining": null
   }
 }
