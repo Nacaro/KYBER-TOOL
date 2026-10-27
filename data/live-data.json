@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-10-27T10:23:08.203766+00:00",
+  "updatedAt": "2026-10-27T16:25:42.849054+00:00",
   "source": "gonk.tools",
   "status": "live",
   "deal": {
-    "name": "L0",
+    "name": "RIC",
     "variant": "",
-    "rarity": "Epic",
+    "rarity": "Mythic",
     "secondsRemaining": null
   }
 }
