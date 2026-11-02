@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-11-02T05:49:34.595400+00:00",
+  "updatedAt": "2026-11-02T15:34:34.345448+00:00",
   "source": "gonk.tools",
   "status": "live",
   "deal": {
-    "name": "ECG",
+    "name": "Groundmech",
     "variant": "",
-    "rarity": "Mythic",
+    "rarity": "Epic",
     "secondsRemaining": null
   }
 }
