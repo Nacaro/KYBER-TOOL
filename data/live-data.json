@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-11-12T09:41:13.495535+00:00",
+  "updatedAt": "2026-11-12T18:08:32.764303+00:00",
   "source": "gonk.tools",
   "status": "live",
   "deal": {
-    "name": "ECG",
+    "name": "BB9",
     "variant": "",
-    "rarity": "Mythic",
+    "rarity": "Legendary",
     "secondsRemaining": null
   }
 }
