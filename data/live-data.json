@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-11-12T01:27:29.821838+00:00",
+  "updatedAt": "2026-11-12T09:41:13.495535+00:00",
   "source": "gonk.tools",
   "status": "live",
   "deal": {
-    "name": "MPH",
+    "name": "ECG",
     "variant": "",
-    "rarity": "Epic",
+    "rarity": "Mythic",
     "secondsRemaining": null
   }
 }
