@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-11-24T00:43:57.740694+00:00",
+  "updatedAt": "2026-11-24T10:49:22.362688+00:00",
   "source": "gonk.tools",
   "status": "live",
   "deal": {
-    "name": "Mecha-Droid",
+    "name": "BB",
     "variant": "",
-    "rarity": "Legendary",
+    "rarity": "Epic",
     "secondsRemaining": null
   }
 }
