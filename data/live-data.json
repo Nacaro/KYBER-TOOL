@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-11-25T04:51:18.453326+00:00",
+  "updatedAt": "2026-11-25T15:27:17.374892+00:00",
   "source": "gonk.tools",
   "status": "live",
   "deal": {
-    "name": "Mecha-Droid",
+    "name": "Gunrunner",
     "variant": "",
-    "rarity": "Legendary",
+    "rarity": "Epic",
     "secondsRemaining": null
   }
 }
